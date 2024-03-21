@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/freitag/static/css/main.58a6e474.css",
+    "main.js": "/freitag/static/js/main.f62cf32b.js",
+    "static/media/black fence.jpg": "/freitag/static/media/black fence.115d8daf4fb4bbca4f70.jpg",
+    "static/media/gray deck.jpg": "/freitag/static/media/gray deck.3bd3f49b9be0f1f29f90.jpg",
+    "static/media/drywall.jpg": "/freitag/static/media/drywall.ab26a867e38ab63b70dd.jpg",
+    "static/media/porch railing.jpg": "/freitag/static/media/porch railing.396b8731bc27a6831428.jpg",
+    "static/media/upper deck 2.jpg": "/freitag/static/media/upper deck 2.e05e7a3b75c5f3b7e81b.jpg",
+    "static/media/epoxy floor.jpg": "/freitag/static/media/epoxy floor.94736927897b639c9e9a.jpg",
+    "static/media/remodel.jpg": "/freitag/static/media/remodel.9a7c780a331996eb1385.jpg",
+    "static/media/freitag_lt.png": "/freitag/static/media/freitag_lt.6dbb334f257a43740c5d.png",
+    "static/media/painter.jpg": "/freitag/static/media/painter.362bd82bf5a5870c8c31.jpg",
+    "static/media/measure.jpg": "/freitag/static/media/measure.c0b7375d07d4d4beab0b.jpg",
+    "static/media/fencing.jpg": "/freitag/static/media/fencing.861aa04290e90a07b84b.jpg",
+    "static/media/planning.jpg": "/freitag/static/media/planning.7e6297fa35bee5552224.jpg",
+    "static/media/Freitag.png": "/freitag/static/media/Freitag.090fb680506c40043796.png",
+    "static/media/contact.jpg": "/freitag/static/media/contact.df3181530910b96adc57.jpg",
+    "index.html": "/freitag/index.html",
+    "main.58a6e474.css.map": "/freitag/static/css/main.58a6e474.css.map",
+    "main.f62cf32b.js.map": "/freitag/static/js/main.f62cf32b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.58a6e474.css",
+    "static/js/main.f62cf32b.js"
+  ]
+}
