@@ -1,0 +1,549 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.6em;
+}
+
+img {
+  width: 100%;
+}
+
+/* Responsive Menu */
+:root {
+  --background: rgba(71, 78, 77, 0.534);
+}
+
+header {
+  background: var(--background);
+  text-align: center;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  opacity: 0.8;
+}
+
+header h1 {
+  color: #fff;
+  padding-top: 20px;
+}
+
+header img {
+  height: 5em;
+}
+
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.nav-toggle:focus~.nav-toggle-label {
+  outline: 3px solid rgba(lightblue, .75);
+}
+
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 1em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+  top: 7px;
+}
+
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background: var(--background);
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+.nav-toggle:checked~nav {
+  transform: scale(1, 1);
+}
+
+.nav-toggle:checked~nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 800px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+
+  .logo {
+    grid-column: 2 / 3;
+  }
+
+  nav {
+    /* all: unset; /* this causes issues with Edge, since it's unsupported */
+
+    /* the following lines are not from my video, but add Edge support */
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1, 1);
+    background: none;
+    top: initial;
+    left: initial;
+    /* end Edge support stuff */
+
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  nav ul {
+    display: flex;
+  }
+
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+}
+
+.hero {
+  background: url('images/measure.jpg') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+}
+
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 0 20px;
+}
+
+.hero .content h1 {
+  font-size: 40px;
+}
+
+.hero .content p {
+  font-size: 23px;
+  max-width: 600px;
+  margin: 20px 0 30px;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero * {
+  z-index: 10;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: #051049;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Icons */
+
+.icon {
+  color: #f00;
+  font-size: 100px;
+  padding: 20px;
+}
+
+.bar {
+  color: #f00;
+  font-size: 20px;
+}
+
+.estimate {
+  justify-content: center;
+  align-items: center;
+  padding: 0 150px;
+}
+
+.simple {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.info-box {
+  justify-content: center;
+  align-items: center;
+}
+
+.info h3,
+p {
+  text-align: left;
+}
+
+.banner {
+  background-color: #051049;
+  color: #fff;
+}
+
+/* Samples */
+.sample {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+}
+
+.samples img {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+/* Mission Statement */
+
+
+.title {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.title h2 {
+  font-weight: 800;
+}
+
+.mission {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  margin: auto;
+}
+
+.mission_color {
+  color: #f00;
+}
+
+.mission img {
+  border-radius: 10px;
+}
+
+.mission-i {
+  justify-content: center;
+  align-self: center;
+  padding: 5px;
+}
+
+.statement {
+  display: flex;
+  padding: 5px 100px;
+}
+
+.mission p {
+  padding: 20px 100px;
+  text-align: center;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0 50px 0 50px;
+  margin: 0 50px 0 50px;
+
+}
+
+.service {
+  padding: 20px;
+  width: 100%;
+}
+
+.service img {
+  width: 100%;
+}
+
+.planning {
+  width: 50%;
+  margin: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.planning h3 {
+  text-align: center;
+}
+
+
+.faq span {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+/* About */
+.about {
+  background-color: #f0f0f0;
+  display: flex;
+  padding: 0 100px;
+  margin: 20px 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.about p {
+  padding: 30px;
+  font-size: .8em;
+  font-weight: 800;
+}
+
+.about img {
+  width: 10rem;
+}
+
+/* Callback form */
+.callback-form {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.callback-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.callback-form .form-control {
+  margin-bottom: 15px;
+}
+
+.callback-form input {
+  width: 100%;
+  padding: 4px;
+  height: 40px;
+  border: #f5f5f5 1px solid;
+}
+
+.callback-form input:focus {
+  outline-color: #28a745;
+}
+
+.callback-form .btn {
+  padding: 12px 0;
+  margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer a:hover {
+  color: #28a745;
+}
+
+.footer .social>* {
+  margin-right: 30px;
+}
+
+.social i {
+  color: #a52a2a;
+}
+
+@media(max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: 120px;
+    padding: 20px;
+  }
+
+  .navbar a {
+    padding: 10px 10px;
+    margin: 0 3px;
+  }
+
+  .hero .content h1 {
+    font-size: 1.6rem;
+    padding: 0 50px;
+    margin-top: 50px;
+    font-weight: 600;
+  }
+
+  .hero .content p {
+    font-size: 1.2rem;
+    padding: 0 50px;
+    margin-top: 50px;
+    font-weight: 600;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+
+  .samples,
+  .mission,
+  .services,
+  .sample,
+  .faq {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+
+  .estimate {
+    padding: 0 20px;
+    margin: 0;
+  }
+
+  .flex-items>div .container2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .flex-columns .column,
+  .flex-grid .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+}
